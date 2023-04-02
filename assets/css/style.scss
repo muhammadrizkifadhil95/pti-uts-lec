@@ -1,0 +1,250 @@
+$line-width: 8px;
+$line-color: rgba(255, 255, 255, 1);
+$outline-width: 4px;
+$shadow-width: 4px;
+
+$button-background: #92CD41;
+$sec-button-background: #76c442;
+$shadow-color: #4AA52E;
+
+$alt-button-background: #F7D51D;
+$alt-sec-button-background: #F2C409;
+$alt-shadow-color: #E59400;
+
+$reset-button-background: #E76E55;
+$reset-sec-button-background: #CE372B;
+$reset-shadow-color: #8C2022;
+
+$blue-button-background: #008DFF;
+$blue-sec-button-background: #0066FF;
+$blue-shadow-color: #0000FF;
+
+$purple-button-background: #d637d6;
+$purple-sec-button-background: #af3efa;
+$purple-shadow-color: #A00DBE;
+
+
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('../font/Minecraft.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'pixel';
+    src: url('../font/upheavtt.ttf') format('truetype');
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    font-family: 'pixel', cursive;
+}
+
+h1 {
+    color: #fff;
+    font-family: 'Press Start 2P', cursive !important;
+}
+
+.box {
+    height: 200px;
+    width: 300px;
+    position: relative;
+}
+
+.box__line {
+    position: absolute;
+    background: $line-color;
+
+    &--top,
+    &--bottom {
+        height: $line-width;
+        width: 100%;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: $line-width;
+            height: $line-width;
+            background: $line-color;
+        }
+    }
+
+    &--top {
+        top: -$line-width;
+
+        &::before {
+            left: 0;
+            bottom: -$line-width;
+        }
+
+        &::after {
+            right: 0;
+            bottom: -$line-width;
+        }
+    }
+
+    &--bottom {
+        bottom: -$line-width;
+
+        &::before {
+            left: 0;
+            top: -$line-width;
+        }
+
+        &::after {
+            right: 0;
+            top: -$line-width;
+        }
+    }
+
+    &--left,
+    &--right {
+        width: $line-width;
+        height: 100%;
+    }
+
+    &--left {
+        left: -$line-width;
+    }
+
+    &--right {
+        right: -$line-width;
+    }
+}
+
+input[type="text"] {
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    background-color: transparent;
+    color: #fff;
+    padding: 5px 0;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    outline: none;
+    box-shadow: none;
+}
+
+input[type="text"]:focus {
+    border-bottom-color: #6e6e6e;
+}
+
+.eightbit-btn {
+    background: $button-background;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    font-family: 'Press Start 2P', cursive;
+    text-decoration: none;
+    color: white;
+    box-shadow: inset (-$shadow-width) (-$shadow-width) 0px 0px $shadow-color;
+
+    &:hover,
+    &:focus {
+        color: #cbf5af;
+        text-decoration: none;
+        background: $sec-button-background;
+        box-shadow: inset (-$shadow-width*1.5) (-$shadow-width*1.5) 0px 0px $shadow-color;
+    }
+
+    &:active {
+        box-shadow: inset $shadow-width $shadow-width 0px 0px $shadow-color;
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-sizing: content-box;
+    }
+
+    &:before {
+        top: -$outline-width;
+        left: 0;
+        border-top: $outline-width rgb(243, 241, 241) solid;
+        border-bottom: $outline-width rgb(253, 252, 252) solid;
+    }
+
+    &:after {
+        left: -$outline-width;
+        top: 0;
+        border-left: $outline-width rgb(255, 255, 255) solid;
+        border-right: $outline-width rgb(255, 255, 255) solid;
+    }
+
+    &--reset {
+        background: $reset-button-background;
+        box-shadow: inset (-$shadow-width) (-$shadow-width) 0px 0px $reset-shadow-color;
+
+        &:hover,
+        &:focus {
+            background: $reset-sec-button-background;
+            box-shadow: inset (-$shadow-width*1.5) (-$shadow-width*1.5) 0px 0px $reset-shadow-color;
+        }
+
+        &:active {
+            box-shadow: inset $shadow-width $shadow-width 0px 0px $reset-shadow-color;
+        }
+
+    }
+
+    &--proceed {
+        background: $alt-button-background;
+        box-shadow: inset (-$shadow-width) (-$shadow-width) 0px 0px $alt-shadow-color;
+
+        &:hover,
+        &:focus {
+            background: $alt-sec-button-background;
+            box-shadow: inset (-$shadow-width*1.5) (-$shadow-width*1.5) 0px 0px $alt-shadow-color;
+        }
+
+        &:active {
+            box-shadow: inset $shadow-width $shadow-width 0px 0px $alt-shadow-color;
+        }
+
+    }
+
+    &--blue {
+        background: $blue-button-background;
+        box-shadow: inset (-$shadow-width) (-$shadow-width) 0px 0px $blue-shadow-color;
+
+        &:hover,
+        &:focus {
+            background: $blue-sec-button-background;
+            box-shadow: inset (-$shadow-width*1.5) (-$shadow-width*1.5) 0px 0px $blue-shadow-color;
+        }
+
+        &:active {
+            box-shadow: inset $shadow-width $shadow-width 0px 0px $blue-shadow-color;
+        }
+
+    }
+
+    &--purple {
+        background: $purple-button-background;
+        box-shadow: inset (-$shadow-width) (-$shadow-width) 0px 0px $purple-shadow-color;
+
+        &:hover,
+        &:focus {
+            background: $purple-sec-button-background;
+            box-shadow: inset (-$shadow-width*1.5) (-$shadow-width*1.5) 0px 0px $purple-shadow-color;
+        }
+
+        &:active {
+            box-shadow: inset $shadow-width $shadow-width 0px 0px $purple-shadow-color;
+        }
+
+    }
+}

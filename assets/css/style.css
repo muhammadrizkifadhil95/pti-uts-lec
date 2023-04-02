@@ -1,0 +1,180 @@
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("../font/Minecraft.ttf") format("truetype");
+}
+@font-face {
+  font-family: "pixel";
+  src: url("../font/upheavtt.ttf") format("truetype");
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-family: "pixel", cursive;
+}
+
+h1 {
+  color: #fff;
+  font-family: "Press Start 2P", cursive !important;
+}
+
+.box {
+  height: 200px;
+  width: 300px;
+  position: relative;
+}
+
+.box__line {
+  position: absolute;
+  background: rgb(255, 255, 255);
+}
+.box__line--top, .box__line--bottom {
+  height: 8px;
+  width: 100%;
+}
+.box__line--top::before, .box__line--top::after, .box__line--bottom::before, .box__line--bottom::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgb(255, 255, 255);
+}
+.box__line--top {
+  top: -8px;
+}
+.box__line--top::before {
+  left: 0;
+  bottom: -8px;
+}
+.box__line--top::after {
+  right: 0;
+  bottom: -8px;
+}
+.box__line--bottom {
+  bottom: -8px;
+}
+.box__line--bottom::before {
+  left: 0;
+  top: -8px;
+}
+.box__line--bottom::after {
+  right: 0;
+  top: -8px;
+}
+.box__line--left, .box__line--right {
+  width: 8px;
+  height: 100%;
+}
+.box__line--left {
+  left: -8px;
+}
+.box__line--right {
+  right: -8px;
+}
+
+input[type=text] {
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  background-color: transparent;
+  color: #fff;
+  padding: 5px 0;
+  font-family: "Press Start 2P", cursive;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  outline: none;
+  box-shadow: none;
+}
+
+input[type=text]:focus {
+  border-bottom-color: #6e6e6e;
+}
+
+.eightbit-btn {
+  background: #92CD41;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  font-family: "Press Start 2P", cursive;
+  text-decoration: none;
+  color: white;
+  box-shadow: inset -4px -4px 0px 0px #4AA52E;
+}
+.eightbit-btn:hover, .eightbit-btn:focus {
+  color: #cbf5af;
+  text-decoration: none;
+  background: #76c442;
+  box-shadow: inset -6px -6px 0px 0px #4AA52E;
+}
+.eightbit-btn:active {
+  box-shadow: inset 4px 4px 0px 0px #4AA52E;
+}
+.eightbit-btn:before, .eightbit-btn:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+}
+.eightbit-btn:before {
+  top: -4px;
+  left: 0;
+  border-top: 4px rgb(243, 241, 241) solid;
+  border-bottom: 4px rgb(253, 252, 252) solid;
+}
+.eightbit-btn:after {
+  left: -4px;
+  top: 0;
+  border-left: 4px rgb(255, 255, 255) solid;
+  border-right: 4px rgb(255, 255, 255) solid;
+}
+.eightbit-btn--reset {
+  background: #E76E55;
+  box-shadow: inset -4px -4px 0px 0px #8C2022;
+}
+.eightbit-btn--reset:hover, .eightbit-btn--reset:focus {
+  background: #CE372B;
+  box-shadow: inset -6px -6px 0px 0px #8C2022;
+}
+.eightbit-btn--reset:active {
+  box-shadow: inset 4px 4px 0px 0px #8C2022;
+}
+.eightbit-btn--proceed {
+  background: #F7D51D;
+  box-shadow: inset -4px -4px 0px 0px #E59400;
+}
+.eightbit-btn--proceed:hover, .eightbit-btn--proceed:focus {
+  background: #F2C409;
+  box-shadow: inset -6px -6px 0px 0px #E59400;
+}
+.eightbit-btn--proceed:active {
+  box-shadow: inset 4px 4px 0px 0px #E59400;
+}
+.eightbit-btn--blue {
+  background: #008DFF;
+  box-shadow: inset -4px -4px 0px 0px #0000FF;
+}
+.eightbit-btn--blue:hover, .eightbit-btn--blue:focus {
+  background: #0066FF;
+  box-shadow: inset -6px -6px 0px 0px #0000FF;
+}
+.eightbit-btn--blue:active {
+  box-shadow: inset 4px 4px 0px 0px #0000FF;
+}
+.eightbit-btn--purple {
+  background: #d637d6;
+  box-shadow: inset -4px -4px 0px 0px #A00DBE;
+}
+.eightbit-btn--purple:hover, .eightbit-btn--purple:focus {
+  background: #af3efa;
+  box-shadow: inset -6px -6px 0px 0px #A00DBE;
+}
+.eightbit-btn--purple:active {
+  box-shadow: inset 4px 4px 0px 0px #A00DBE;
+}/*# sourceMappingURL=style.css.map */
