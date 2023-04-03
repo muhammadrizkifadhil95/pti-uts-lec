@@ -191,4 +191,32 @@ input[type=text]:focus {
 }
 .eightbit-btn--purple:active {
   box-shadow: inset 4px 4px 0px 0px #A00DBE;
+}
+
+#playButton {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 45px solid rgb(253, 249, 249);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+#playButton.playing {
+  border-left: none;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 30px solid rgb(255, 255, 255);
+}
+
+.music {
+  position: absolute;
+  right: 0;
+}
+.music audio {
+  opacity: 0;
 }/*# sourceMappingURL=style.css.map */

@@ -25,8 +25,10 @@ function setTime() {
     // Update greeting label
     if (parseInt(hoursLabel.innerHTML) <= 12) {
         greetingLabel.innerHTML = "Good Morning";
-    } else if (parseInt(hoursLabel.innerHTML) >= 12 && parseInt(hoursLabel.innerHTML) < 6) {
+    } else if (parseInt(hoursLabel.innerHTML) >= 12 && parseInt(hoursLabel.innerHTML) <= 18) {
         greetingLabel.innerHTML = "Good Afternoon";
+    } else {
+        greetingLabel.innerHTML = "Good Night";
     }
 
     // Check if total hours is greater than or equal to 12, and reset total minutes to 0
