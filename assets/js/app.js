@@ -8,7 +8,7 @@ var hoursLabel = document.getElementById("hours");
 var minutesLabel = document.getElementById("minutes");
 var amPmLabel = document.getElementById("am/pm");
 var totalMinutes = 11 * 60; // Start at 12:00 a.m. (11 * 60 = 660 minutes)
-setInterval(setTime, 10);
+setInterval(setTime, 1000);
 
 function setTime() {
     ++totalMinutes;
