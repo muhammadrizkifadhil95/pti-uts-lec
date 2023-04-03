@@ -12,6 +12,7 @@ setInterval(setTime, 1000);
 
 function setTime() {
     ++totalMinutes;
+    //1 detik real-time = 1 menit in-game
     minutesLabel.innerHTML = pad(totalMinutes % 60);
     hoursLabel.innerHTML = pad(parseInt(totalMinutes / 60) % 24); // Add 1 to start at 12
 
